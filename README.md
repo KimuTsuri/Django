@@ -3,12 +3,12 @@ Django framework for Mac
 
 ## New Project start
 ```
-$ django-admin 
+$ django-admin startproject [project name]
 ```
 
 ## New App start
 ```
-$ python3 manage.py 
+$ python3 manage.py startapp [app name]
 ```
 
 ## Open Run server
@@ -22,7 +22,7 @@ Quit the server with CONTROL-C.
 
 ## Add changes
 ```
-$ python3 manage.py makemigrations diary
+$ python3 manage.py makemigrations [app name]
 $ python3 manage.py migrate
 ```
 
