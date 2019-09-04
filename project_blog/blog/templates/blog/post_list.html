@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in post_list %}
+    <div class="card mb-3">
+     <h4 class="card-header bg-gray">{{ post.title }}</h4>
+      <div class="card-body">
+        <p>{{ post.created_at }} <span class="badge badge-pill badge-primary">{{ post.category }}</span></p>
+        <a href="{% url 'blog:detail' post.pk %}" class="btn btn-outline-dark">More View</a>
+      </div>
+    </div>
+{% endfor %}
+
+    {% include 'blog/page.html' %}
+
+{% endblock %}
