@@ -8,4 +8,21 @@
         {{ post.text | linebreaksbr | urlize }}
       </div>
     </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h4 class="card-title">Comment List</h4>
+
+          {% for comment in post.comment_set.all %}
+            <h5 class="card-subtitle mb-2 text-muted">{{ comment.name }}</h5>
+            <hr class="my-2">
+            <p class="card-text">
+              {{ comment.text | linebreaksbr }}
+            </p>
+          {% endfor %}
+
+      </div>
+    </div>
+
+    <a class = "btn btn-outline-dark mb-3" href="{% url 'blog:comment' post.pk %}">Comment</a>
 {% endblock %}

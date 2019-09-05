@@ -53,7 +53,7 @@
           <div class="col-md-4">
 
 
-            <ul class="list-group">
+            <ul class="list-group mb-3">
               <li class="list-group-item bg-dark text-white">Category</li>
               {% for category in category_list %}
                   <li class="list-group-item"><a href="{% url 'blog:category' category.pk %}">{{ category }}</a></li>
